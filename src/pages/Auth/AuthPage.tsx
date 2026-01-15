@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import PainelSlide from "../../components/auth/PainelSlide";
 import Login from "../../components/auth/Login";
 import Register from "../../components/auth/Register";
@@ -9,19 +10,21 @@ type Props = {
 };
 
 export default function AuthPage({ mode }: Props) {
-  const isLogin = mode === "register";
+  const navigate = useNavigate();
+  const isLogin = mode === "login";
+
+  const handleChangeMode = (newMode: AuthMode) => {
+    navigate(newMode === "login" ? "/login" : "/register");
+  };
 
   return (
-    <div  className="flex items-center justify-center min-h-screen">
-      <div>
+    <div className="auth-container">
+      <div className="auth-components">
         <Login />
-      </div>
-
-      <div>
         <Register />
-      </div>
 
-      <PainelSlide isLogin={isLogin} />
+        <PainelSlide isLogin={isLogin} onChangeMode={handleChangeMode} />
+      </div>
     </div>
   );
 }

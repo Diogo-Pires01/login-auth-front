@@ -1,21 +1,38 @@
 type Props = {
   isLogin: boolean;
+  onChangeMode: (mode: "login" | "register") => void;
 };
 
-export default function PainelSlide({ isLogin }: Props) {
+export default function PainelSlide({ isLogin, onChangeMode }: Props) {
   return (
-    <div>
-      <div>
+    <div
+      className={`painel-container ${
+        isLogin ? "translate-x-full" : "translate-x-0"
+      }`}
+    >
+      <div className="painel-el">
         {isLogin ? (
-          <div>
-            <h2>Não tem conta?</h2>
-            <p>Crie uma agora</p>
-          </div>
+          <>
+            <h2 className="text-2xl font-semibold">Não tem conta?</h2>
+            <p className="text-purple-200">Crie uma agora</p>
+            <button
+              onClick={() => onChangeMode("register")}
+              className="painel-btn"
+            >
+              Registrar
+            </button>
+          </>
         ) : (
-          <div>
-            <h2>Já tem conta?</h2>
-            <p>Faça login</p>
-          </div>
+          <>
+            <h2 className="text-2xl font-semibold">Já tem conta?</h2>
+            <p className="text-purple-200">Faça login</p>
+            <button
+              onClick={() => onChangeMode("login")}
+              className="painel-btn"
+            >
+              Entrar
+            </button>
+          </>
         )}
       </div>
     </div>
