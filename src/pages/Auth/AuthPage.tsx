@@ -12,7 +12,7 @@ export default function AuthPage({ mode }: Props) {
   const isLogin = mode === "register";
 
   return (
-    <div>
+    <div  className="flex items-center justify-center min-h-screen">
       <div>
         <Login />
       </div>
