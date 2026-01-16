@@ -13,43 +13,43 @@
 @layer components {
   /* AuthPage */
   .auth-container {
-    @apply flex items-center justify-center min-h-screen bg-stone-200;
+    @apply flex items-center justify-center min-h-screen bg-linear-to-b from-white to-amber-200;
   }
   .auth-components {
-    @apply relative flex h-100 rounded-4xl overflow-hidden shadow-2xl;
+    @apply relative flex h-120 rounded-4xl overflow-hidden shadow-2xl;
   }
 
   /* PainelSlide */
   .painel-container {
-    @apply absolute top-0 left-0 h-100 w-sm bg-purple-800
-        flex items-center justify-center text-white
-        transition-transform duration-800 ease-in-out
+    @apply absolute top-0 left-0 h-120 w-sm bg-amber-300
+        flex items-center justify-center 
+        transition-transform duration-700 ease-in-out
         rounded-4xl;
   }
   .painel-el {
     @apply flex flex-col items-center text-center gap-3 px-8;
   }
   .painel-btn {
-    @apply mt-4 border border-white px-6 py-2 rounded-full hover:bg-white hover:text-purple-800 transition;
+    @apply mt-2 border w-full py-2 rounded-full hover:bg-amber-300 hover:text-white transition;
   }
 
   /* Login e Register */
   .component-container {
-    @apply bg-white h-100 w-sm;
+    @apply bg-white h-120 w-sm;
   }
   .itens-container {
-    @apply flex flex-col items-center gap-6 w-full px-8 justify-center h-100;
+    @apply flex flex-col items-center gap-6 w-full px-8 justify-center h-120;
   }
   .form-title {
-    @apply text-4xl font-semibold text-slate-800;
+    @apply text-4xl font-thin;
   }
   .form-container {
     @apply flex flex-col gap-4 w-full max-w-sm;
   }
   .form-input {
-    @apply w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600;
+    @apply w-full px-4 py-2 border border-slate-300 rounded-3xl focus:outline-none;
   }
   .form-btn {
-    @apply mt-2 bg-purple-800 text-white py-2 rounded-md font-medium hover:bg-purple-700 transition;
+    @apply mt-2 bg-amber-300 py-2 rounded-3xl font-medium hover:bg-amber-400 transition;
   }
 }

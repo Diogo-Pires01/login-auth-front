@@ -13,19 +13,19 @@ export default function PainelSlide({ isLogin, onChangeMode }: Props) {
       <div className="painel-el">
         {isLogin ? (
           <>
-            <h2 className="text-2xl font-semibold">Não tem conta?</h2>
-            <p className="text-purple-200">Crie uma agora</p>
+            <h2 className="text-3xl font-semibold text-white">Não tem conta?</h2>
+            <p className="text-white text-lg">Crie uma agora</p>
             <button
               onClick={() => onChangeMode("register")}
               className="painel-btn"
             >
-              Registrar
+              Criar conta
             </button>
           </>
         ) : (
           <>
-            <h2 className="text-2xl font-semibold">Já tem conta?</h2>
-            <p className="text-purple-200">Faça login</p>
+            <h2 className="text-3xl font-semibold text-white">Já tem conta?</h2>
+            <p className="text-white text-lg">Faça login</p>
             <button
               onClick={() => onChangeMode("login")}
               className="painel-btn"

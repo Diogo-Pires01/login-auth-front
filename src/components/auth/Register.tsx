@@ -22,7 +22,7 @@ const Register = () => {
           />
 
           <button type="submit" className="form-btn">
-            Cadastrar
+            Criar conta
           </button>
         </form>
       </div>
